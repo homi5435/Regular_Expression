@@ -186,8 +186,8 @@ aabb # 매치안됨
 ```python
 import re
 
-pattern ='$15'
-string = 'Hello $10'
+pattern ='\$15'
+string = 'Hello $15'
 
 match = re.search(pattern,  string)
 if match:
@@ -237,11 +237,11 @@ None # "3 python" 문자열은 처음에 나오는 문자 3이 정규식에 부�
 
 2. search(): 문자열 전체를 검색하여 정규식과 매치되는지 조사합니다.
 ```python
-m = p.match("python")
+m = p.search("python")
 print(m)
 <re.Match object; span=(0, 6), match='python'> # match 메서드를 수행했을 때와 동일
 
-n = p.match("3 python")
+n = p.search("3 python")
 print(n)
 <re.Match object; span=(2, 8), match='python'> # 문자열 전체를 검색하기 때문에 "3 " 이후의 "python" 문자열과 매치
 ```
